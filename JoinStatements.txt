@@ -35,8 +35,7 @@ A: Use a natural join if you want similar column names to show up once.
 ```
 SELECT e.name, s.date, s.start_time, s.end_time
 FROM employees as e
-JOIN scheduled_shifts as ss on e.id = ss.employee_id
-JOIN shifts as s on s.id = ss.shift_id;
+JOIN shifts as s on s.id = e.id;
 ```
 
 >8.Using this Adoption schema and data, please write queries to retrieve the following information and include the results:
